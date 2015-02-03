@@ -33,11 +33,12 @@ echo ""
 echo "<html><head><title>RGB</title></head>"
 echo "<body>"
 echo "<h1>Uspesne nastaveno!<h1>"
+echo "<h2><a href="/cgi-bin/form.sh">Znovu!!!</a></h2>"
 echo "</body></html>"
 
 sleep 5
 
-echo "<PISMENO,0,0,0,0,0,0,0>" > /dev/ttyS0
+#echo "<PISMENO,0,0,0,0,0,0,0>" > /dev/ttyS0
 
 
 

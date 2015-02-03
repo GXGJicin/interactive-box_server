@@ -21,12 +21,10 @@ var wtf = jQuery.noConflict();
 wtf(document).ready(function() {
 	console.log("ready!");
 	
-	wtf('#picker').colpick({
+	wtf('#geekBarva').colpick({
 		flat:true,
 		layout:'hex',
 		submit:0,
-
-
 		onChange:function(hsb,hex,rgb,el,bySetColor) {
 			console.log(rgb);
 			wtf("input[name='geekR']").val(rgb.r);
@@ -34,6 +32,18 @@ wtf(document).ready(function() {
 			wtf("input[name='geekB']").val(rgb.b);
 		}
 	});
+
+        wtf('#labBarva').colpick({                           
+                flat:true,                                    
+                layout:'hex',                                 
+                submit:0,                                     
+                onChange:function(hsb,hex,rgb,el,bySetColor) {
+                        console.log(rgb);                     
+                        wtf("input[name='labR']").val(rgb.r);
+                        wtf("input[name='labG']").val(rgb.g);
+                        wtf("input[name='labB']").val(rgb.b);
+                }                                             
+        }); 
 
 });
 
@@ -58,6 +68,8 @@ cat << EOF
 R: <input name="geekR" value="128">
 G: <input name="geekG" value="128">
 B: <input name="geekB" value="128">
+<br><br>
+<span id="geekBarva"></span>
 </fieldset>
 <br>
 <fieldset>
@@ -65,16 +77,16 @@ B: <input name="geekB" value="128">
 R: <input name="labR" value="128">
 G: <input name="labG" value="128">
 B: <input name="labB" value="128">
+<br><br>
+<span id="labBarva"></span>
 </fieldset>
 <br>
-<input type="submit" name="odeslat" value="Rozsvitit!">
+<input type="submit" name="odeslat" value="Rozsvitit!" style="font-size: 150%">
 <form>
 
 
 
 
-<br><br>
-<div id="picker"></div>
  
 EOF
 # -----------------
