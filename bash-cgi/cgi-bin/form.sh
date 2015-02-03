@@ -2,7 +2,48 @@
  
 echo "Content-type: text/html"
 echo ""
-echo "<html><head><title>RGB</title></head>"
+echo "<html><head><title>RGB</title>"
+
+# http://colpick.com/plugin
+# -----------------------
+cat << EOF
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<script src="/colpick.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/colpick.css" type="text/css"/>
+
+<script>
+
+var wtf = jQuery.noConflict();
+wtf(document).ready(function() {
+	console.log("ready!");
+	
+	wtf('#picker').colpick({
+		flat:true,
+		layout:'hex',
+		submit:0,
+
+
+		onChange:function(hsb,hex,rgb,el,bySetColor) {
+			console.log(rgb);
+			wtf("input[name='geekR']").val(rgb.r);
+			wtf("input[name='geekG']").val(rgb.g);
+			wtf("input[name='geekB']").val(rgb.b);
+		}
+	});
+
+});
+
+</script>
+
+EOF
+
+# -----------------------
+
+echo "</head>"
 echo "<body>"
  
 # -----------------
@@ -28,6 +69,12 @@ B: <input name="labB" value="128">
 <br>
 <input type="submit" name="odeslat" value="Rozsvitit!">
 <form>
+
+
+
+
+<br><br>
+<div id="picker"></div>
  
 EOF
 # -----------------
@@ -35,7 +82,7 @@ EOF
 #echo "<br>"
 #echo ${geekR}
 #echo "<br>"
- 
+
  
 # FORM GET:
 #saveIFS=$IFS
