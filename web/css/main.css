@@ -1,0 +1,59 @@
+
+body {
+
+        background-color: black;
+}
+
+.text {
+        margin-left: auto;                     
+        margin-right: auto;
+}
+
+.geek {
+		    background-color : red;
+        width: 70%;
+        max-width: 388px;
+        display: inline-block;
+}
+
+.lab {
+		    background-color : blue;
+        width: 43.16%; 
+        max-width: 243px;
+        display: inline-block;
+}
+
+.tlacitko {
+        width: 24.72%; 
+        max-width: 137px;
+        display: inline-block;
+}
+
+@media (max-width: 768px) {
+
+  .geek {
+    margin-left: auto;                     
+    margin-right: auto;
+    display: block !important;
+  }
+  
+  .lab {
+    margin-left: auto;                     
+    margin-right: auto;
+    display: block !important;
+  }
+
+    .tlacitko {
+    margin-left: auto;                     
+    margin-right: auto;
+    display: block !important;
+  }
+  
+}
+
+img {
+   display : block; 
+   width:100%;
+}
+
+
