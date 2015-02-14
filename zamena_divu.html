@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Barvy</title>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- jQuery -->
+
+<script>
+
+$(document).ready(function() {	
+
+	function vymenit() {
+		var strDiv1Cont = $("#prvni").html();
+		var strDiv2Cont = $("#druhy").html();
+
+		$("#prvni").html(strDiv2Cont);
+		$("#druhy").html(strDiv1Cont);
+	}
+
+	if ($(document).width() < 500) {
+		vymenit();
+	}
+
+});
+
+</script>
+
+</head>
+<body>
+
+	<div id="prvni">prvni</div>
+	<div id="druhy">druhy</div> 
+ 
+</body>
+</html> 
