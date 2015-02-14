@@ -13,31 +13,31 @@
 
 <script>
 
-var wtf = jQuery.noConflict();
-wtf(document).ready(function() {
+
+$(document).ready(function() {
 	console.log("ready!");
 	
-	wtf('#geekBarva').colpick({
+	$('#geekBarva').colpick({
 		flat:true,
 		layout:'hex',
 		submit:0,
 		onChange:function(hsb,hex,rgb,el,bySetColor) {
 			console.log(rgb);
-			wtf("input[name='geekR']").val(rgb.r);
-			wtf("input[name='geekG']").val(rgb.g);
-			wtf("input[name='geekB']").val(rgb.b);
+			$("input[name='geekR']").val(rgb.r);
+			$("input[name='geekG']").val(rgb.g);
+			$("input[name='geekB']").val(rgb.b);
 		}
 	});
 
-        wtf('#labBarva').colpick({                           
+        $('#labBarva').colpick({                           
                 flat:true,                                    
                 layout:'hex',                                 
                 submit:0,                                     
                 onChange:function(hsb,hex,rgb,el,bySetColor) {
                         console.log(rgb);                     
-                        wtf("input[name='labR']").val(rgb.r);
-                        wtf("input[name='labG']").val(rgb.g);
-                        wtf("input[name='labB']").val(rgb.b);
+                        $("input[name='labR']").val(rgb.r);
+                        $("input[name='labG']").val(rgb.g);
+                        $("input[name='labB']").val(rgb.b);
                 }                                             
         }); 
 
