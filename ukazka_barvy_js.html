@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Barvy</title>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- jQuery -->
+
+<script>
+
+$(document).ready(function() {	
+	var r = $("#barvaR").val();
+	var g = $("#barvaG").val();
+	var b = $("#barvaB").val();
+		
+	$("#barvaR").change(function() {
+		r = $("#barvaR").val();
+		nastavBarvu();
+	});
+	
+	$("#barvaG").change(function() {
+		g = $("#barvaG").val();
+		nastavBarvu();
+	});	
+	
+	$("#barvaB").change(function() {
+		b = $("#barvaB").val();
+		nastavBarvu();
+	});	
+	
+	function nastavBarvu() {
+		console.log("cervena=" + r + " zelena=" + g + " modra=" + b);
+		$("#namichanaBarva").css("background-color", "rgb(" + r + "," + g + "," + b  +")");	
+	}
+});
+
+</script>
+
+<style>
+#namichanaBarva {
+	border-width: 2px;
+	border-style: solid;
+	border-color: black; 
+	width: 100px;
+	height: 100px;
+}
+</style>
+
+</head>
+<body>
+ 
+	<!-- do tohoto divu se nastavi namichana barva -->
+	<div id="namichanaBarva"></div>
+ 
+ 
+	<p>Vyber barvy:</p>	
+	 
+	<form>	 
+
+		<!-- vstupni pole pro rozsah (slider), funguje pouze v novych prohlizecich - Internet Explorer s tim ma problemy!
+			http://www.html5tutorial.info/html5-range.php
+		-->
+		<input id="barvaR" type="range" min="0" max="255" step="1" /> R (0 - 255)
+		<br>
+		<input id="barvaG" type="range" min="0" max="255" step="1" /> G (0 - 255)
+		<br>
+		<input id="barvaB" type="range" min="0" max="255" step="1" /> B (0 - 255)
+	
+	</form>
+ 
+</body>
+</html> 
