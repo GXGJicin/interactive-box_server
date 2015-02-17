@@ -65,29 +65,6 @@ $(document).ready(function() {
 </script>
 <!-- Skript hlida nastaveni barev -->
 
-<!-- Skript prohazuje poradi DIVU
-<script>
-$(document).ready(function() {	
-	function vymenit() {
-		var strDiv1Cont = $(".geek").html();
-		var strDiv2Cont = $(".lab").html();
-  	var strDiv3Cont = $(".tlacitko").html();
-    var strDiv4Cont = $(".SliderG").html();
-    var strDiv5Cont = $(".SliderL").html();
-		$(".geek").html(strDiv2Cont);
-		$(".lab").html(strDiv4Cont);
-    $(".tlacitko").html(strDiv1Cont);
-		$(".SliderG").html(strDiv3Cont);
-    $(".SliderL").html(strDiv5Cont);
-	}
-	if ($(document).width() < 768) {
-		vymenit();
-	}
-});
-</script>
-Skript prohazuje poradi DIVU -->
-
-
 <script>
   function na() {	
     document.getElementById(123).src = "images/tlacitko_na.png";
@@ -131,8 +108,10 @@ Skript prohazuje poradi DIVU -->
                     </map> 
                   <img src="images/tlacitko.png" usemap="#vyrez" onmouseover="na()" onmouseout="ven()" onclick="do()"id="123"/>
                 </div>   
-                <div class="geek"> 
+                <div class="geekObal">
+				<div class="geek"> 
 					<img src="images/geeknew.png"/>
+					</div>
 					<div class="SliderG">
 					  <form>
 						<input id="barvaGR" data-orientation="vertical" value="125" type="range" min="0" max="255" >
@@ -141,10 +120,13 @@ Skript prohazuje poradi DIVU -->
 						  <br>               
 						<input id="barvaGB" data-orientation="vertical" value="125" type="range" min="0" max="255" >
 					  <form>             
-					</div> 
-				</div>		 
+					</div>
+				</div>
+				
+				<div class="labObal">				
                 <div class="lab">
                   <img src="images/labnew.png"/>
+				  </div>
 			    <div class="SliderL">
                   <form>
                     <input id="barvaLR" data-orientation="vertical" value="125" type="range" min="0" max="255" >
@@ -153,8 +135,9 @@ Skript prohazuje poradi DIVU -->
                       <br>               
                     <input id="barvaLB" data-orientation="vertical" value="125" type="range" min="0" max="255" >
 					<form>            
-			        </div> 
+			        </div>
 				</div>
+				
 			  </figure>	
 
 
