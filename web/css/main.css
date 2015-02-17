@@ -40,6 +40,7 @@ body {
 	display: inline-block;
     width: 43.16%; 
     max-width: 243px;
+	margin-left: 50px;
 }
 
 input[type=range] {
@@ -81,7 +82,7 @@ input[type=range]:hover{
   }  
   
   .geekObal {
-      margin-left: auto;                     
+      margin-left: auto !important;                     
       margin-right: auto;          
       display: block !important;
   }
