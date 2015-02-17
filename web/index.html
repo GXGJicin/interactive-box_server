@@ -2,12 +2,102 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Twitter Bootstrap 3 Responsive Layout Example</title>
+<title>GXG Garage</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/main.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- jQuery web-->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- jQuery web-->
+
+<!-- Skript hlida nastaveni barev -->
+<script>  
+$(document).ready(function() {	
+	var gr = $("#barvaGR").val();
+	var gg = $("#barvaGG").val();
+	var gb = $("#barvaGB").val();
+  var lr = $("#barvaLR").val();
+	var lg = $("#barvaLG").val();
+	var lb = $("#barvaLB").val();
+		
+	$("#barvaGR").change(function() {
+		gr = $("#barvaGR").val();
+		nastavBarvu();
+	});
+	
+	$("#barvaGG").change(function() {
+		gg = $("#barvaGG").val();
+		nastavBarvu();
+	});	
+	
+	$("#barvaGB").change(function() {
+		gb = $("#barvaGB").val();
+		nastavBarvu();
+	});	
+  
+	$("#barvaLR").change(function() {
+		lr = $("#barvaLR").val();
+		nastavBarvu();
+	});
+  
+	$("#barvaLG").change(function() {
+		lg = $("#barvaLG").val();
+		nastavBarvu();
+	});	
+  
+	$("#barvaLB").change(function() {
+		lb = $("#barvaLB").val();
+		nastavBarvu();
+	});	
+	
+	function nastavBarvu() {
+		console.log("cervena=" + gr + " zelena=" + gg + " modra=" + gb);
+		$(".geek").css("background-color", "rgb(" + gr + "," + gg + "," + gb +")");	
+
+		console.log("cervena=" + lr + " zelena=" + lg + " modra=" + lb);
+		$(".lab").css("background-color", "rgb(" + lr + "," + lg + "," + lb +")");	
+	}
+  
+});
+</script>
+<!-- Skript hlida nastaveni barev -->
+
+<!-- Skript prohazuje poradi DIVU
+<script>
+$(document).ready(function() {	
+	function vymenit() {
+		var strDiv1Cont = $(".geek").html();
+		var strDiv2Cont = $(".lab").html();
+  	var strDiv3Cont = $(".tlacitko").html();
+    var strDiv4Cont = $(".SliderG").html();
+    var strDiv5Cont = $(".SliderL").html();
+		$(".geek").html(strDiv2Cont);
+		$(".lab").html(strDiv4Cont);
+    $(".tlacitko").html(strDiv1Cont);
+		$(".SliderG").html(strDiv3Cont);
+    $(".SliderL").html(strDiv5Cont);
+	}
+	if ($(document).width() < 768) {
+		vymenit();
+	}
+});
+</script>
+Skript prohazuje poradi DIVU -->
+
+
+<script>
+  function na() {	
+    document.getElementById(123).src = "images/tlacitko_na.png";
+      }
+
+  function ven() {	
+    document.getElementById(123).src = "images/tlacitko.png";
+  }
+</script>  
+
 </head>
 <body>
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -25,40 +115,53 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="http://www.tutorialrepublic.com" target="_blank">Logo</a></li>
+                <li><a href="http://www.tutorialrepublic.com" target="_blank">Logo</a></li>
                 <li><a href="http://www.tutorialrepublic.com/about-us.php" target="_blank">Zvonek</a></li>
                 <li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Soutez</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="row">
-    <!--<div class="jumbotron">
-        aaaaaaaaaaaaaaaaaaaaaa
-    </div>-->
-    
-         <hr>
-   		      <figure>
-				      <div class="text">
-                <div class="geek">
-						      <img src="images/geeknew.png"/>
-					      </div>		 
+      <hr>
+      <hr>
+         <figure>	
+                  <div class="tlacitko">
+                		<map name="vyrez">
+                    <area shape="circle" coords="36,92,28" nohref>
+                    </map> 
+                  <img src="images/tlacitko.png" usemap="#vyrez" onmouseover="na()" onmouseout="ven()" onclick="do()"id="123"/>
+                </div>   
+                <div class="geek"> 
+					<img src="images/geeknew.png"/>
+					<div class="SliderG">
+					  <form>
+						<input id="barvaGR" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+						  <br>
+						<input id="barvaGG" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+						  <br>               
+						<input id="barvaGB" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+					  <form>             
+					</div> 
+				</div>		 
                 <div class="lab">
                   <img src="images/labnew.png"/>
-			          </div>
-                <div class="tlacitko">
-                  <img src="images/tlacitko.png"/>
-			          </div>
-              </div>   
-			     </figure>	   
-			
-		</div>
-   
-    </div>
-	
-	
-	
-	
+			    <div class="SliderL">
+                  <form>
+                    <input id="barvaLR" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+                      <br>
+                    <input id="barvaLG" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+                      <br>               
+                    <input id="barvaLB" data-orientation="vertical" value="125" type="range" min="0" max="255" >
+					<form>            
+			        </div> 
+				</div>
+			  </figure>	
+
+
+
 </div>
 </body>
-</html>                                		
+</html>   
+
+
+                           		
