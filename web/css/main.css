@@ -71,9 +71,8 @@ input[type=range]:hover{
 }
  
  
- 
-   
-@media (max-width: 768px) {
+ @media (max-width: 768px) 
+{
 
   body {
         margin-left: auto;                     
@@ -116,7 +115,8 @@ input[type=range]:hover{
 
 img {
    display : block !important;
-   width:100%;
+   width: 100%;
+  
 }
 
 figure {
@@ -146,5 +146,23 @@ figure {
 #barvaLB {
 	background-color: blue;
 }
+
+
+.button li img {
+    position: auto;
+    opacity: 1;
+	width: 74px;
+}
+.button li img:first-child {
+    opacity: 0;
+}
+
+.button li:hover img {
+    opacity: 0;
+}
+.button li:hover img:first-child {
+    opacity: 1;
+}
+
 
 

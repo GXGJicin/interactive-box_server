@@ -73,6 +73,19 @@
             function ven() {
                 document.getElementById("123").src = "images/tlacitko.png";
             }
+			
+			var click = false;
+			
+			function doSwitch() {
+			        click = !click;
+					if (click) {
+						document.getElementById("imgButton").src = "images/tlacitko_do.png";
+						document.getElementById("imgHoverButton").src = "images/tlacitko_do.png";
+					} else {
+						document.getElementById("imgButton").src = "images/tlacitko_na.png";
+						document.getElementById("imgHoverButton").src = "images/tlacitko.png";
+					}
+				}
         </script>  
 
     </head>
@@ -102,12 +115,23 @@
         <hr>
         <hr>
         <figure>	
-            <div class="tlacitko">
+				<div class="tlacitko">
+					
+				  <ul class="button" >
+					<li >
+						
+						<img src="images/tlacitko_na.png"  onclick="doSwitch()" id="imgButton">
+						<img src="images/tlacitko.png"   onclick="doSwitch()" id="imgHoverButton">
+					  <!-- <a id="foobar" href="http://www.google.com/search?q=foobar">Foobar</a> -->
+					</li>
+				  </ul>
+				</div>
+            <!-- <div class="tlacitko">
                 <map name="vyrez">
                     <area shape="circle" coords="36,92,28" nohref>
                 </map> 
                 <img src="images/tlacitko.png" usemap="#vyrez" onmouseover="na()" onmouseout="ven()" onclick="doSwitch()" id="123"/>
-            </div>   
+            </div>    -->
             <div class="geekObal">
                 <div class="geek"> 
                     <img src="images/geeknew.png"/>
