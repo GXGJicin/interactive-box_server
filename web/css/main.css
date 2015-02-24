@@ -33,7 +33,7 @@ body {
 	display: inline-block;
 	width: 70%;
     max-width: 388px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .labObal {
@@ -74,43 +74,45 @@ input[type=range]:hover{
  @media (max-width: 768px) 
 {
 
-  body {
-        margin-left: auto;                     
-        margin-right: auto;
-        width: auto;
-  }  
-  
-  .geekObal {
-      margin-left: auto !important;                     
-      margin-right: auto;          
-      display: block !important;
-  }
-  
-  .labObal {
-	  margin-top: 20px;
-      margin-left: auto;                     
-      margin-right: auto;          
-      display: block !important;
-  }
+	  body {
+			margin-left: auto;                     
+			margin-right: auto;
+			width: auto;
+	  }  
+	  
+	  .geekObal {
+		  margin-top: 60px;
+		  margin-left: auto !important;                     
+		  margin-right: auto;          
+		  display: block !important;
+	  }
+	  
+	  .labObal {
+		  margin-top: 20px;
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block !important;
+	  }
 
-  .tlacitko {
-      margin-left: auto;                     
-      margin-right: auto;          
-      display: block !important;
-  }
-  
-.SliderG {
-      margin-left: auto;                     
-      margin-right: auto;          
-      display: block !important;
-}
+	  .tlacitko {
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block !important;
+	  }
+	  
+	.SliderG {
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block !important;
+	}
 
-.SliderL {
-      margin-left: auto;                     
-      margin-right: auto;          
-      display: block !important;  
-}
-  
+	.SliderL {
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block !important;  
+	}
+	
+	  
 }
 
 img {
@@ -148,19 +150,19 @@ figure {
 }
 
 
-.button li img {
-    position: auto;
+.buttonApp li img {
+    position: absolute;
     opacity: 1;
 	width: 74px;
 }
-.button li img:first-child {
+.buttonApp li img:first-child {
     opacity: 0;
 }
 
-.button li:hover img {
+.buttonApp li:hover img {
     opacity: 0;
 }
-.button li:hover img:first-child {
+.buttonApp li:hover img:first-child {
     opacity: 1;
 }
 
