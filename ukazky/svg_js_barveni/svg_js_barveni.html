@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--  
+Ukazka nacteni SVG obrazku ze souboru pomoci jQuerry
+a barveni jeho ploch klikanim mysi (jQuerry).
+	
+	
+!!! Nefunguje pri otevreni souboru "svg_js_barveni.html" v prohlizeci !!!
+
+Je to kvuli bezpecnosti http://en.wikipedia.org/wiki/Same-origin_policy
+Pro testovani idealni pouzit testovaci webserver. 
+Napr. spustit v adresari:    python -m SimpleHTTPServer
+a na http://localhost:8000 bezi testovaci webserver s obsahem aktualniho
+adresare.
+Windows uzivatele si musi stahnout Python: 
+  https://www.python.org/downloads/windows/
+-->
+
+<html>
+<head>
+<title>SVG - JavaScript barveni</title>
+<meta charset="utf-8"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+var vypln = "#FF0000"; 
+var souborObrazku = null; // vychozi obrazek
+
+function nactiObrazek(souborObrazku) {
+	$('#obrazek').load('lab.svg', null, function() { 
+	    $('svg').click( function() {
+	    	$(event.target).attr('style', "fill:"+vypln);
+	    });
+	});
+}
+  
+$(document).ready(function() {
+	nactiObrazek(souborObrazku);	
+});
+</script>
+</head>
+<body>
+	
+<svg id="obrazek" height="480" width="640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+				
+</body>
+</html>
