@@ -29,6 +29,14 @@
     <!-- Skript hlida nastaveni barev -->
         <script>
             $(document).ready(function() {
+				$(".ui-slider:has(#barvaGR):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(255, 0, 0, 0.45)");
+				$(".ui-slider:has(#barvaGG):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(0, 255, 0, 0.45)");
+				$(".ui-slider:has(#barvaGB):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(0, 0, 255, 0.45)");
+				
+				$(".ui-slider:has(#barvaLR):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(255, 0, 0, 0.45)");
+				$(".ui-slider:has(#barvaLG):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(0, 255, 0, 0.45)");
+				$(".ui-slider:has(#barvaLB):has(.ui-btn-corner-all) .ui-btn-corner-all").css("background-color", "rgba(0, 0, 255, 0.45)");
+								
                 var gr = $("#barvaGR").val();
                 var gg = $("#barvaGG").val();
                 var gb = $("#barvaGB").val();

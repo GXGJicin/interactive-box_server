@@ -15,7 +15,6 @@ body{
       line-height: 70%; 
 }
 
-
 @media (max-width: 400px) {
 
     body{
@@ -99,7 +98,7 @@ body{
     }
 
     .ui-btn-corner-all  {              /* cara */
-      background-color: rgba(255, 0, 0, 0.45) !important;
+      /*background-color: rgba(255, 0, 0, 0.45) !important;*/
     }
 
     .ui-slider-track .ui-btn.ui-slider-handle.ui-focus {  /* stin */
