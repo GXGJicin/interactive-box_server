@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>GXG Garage</title>
         <link rel="stylesheet" href="css/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
 		
 		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -80,6 +80,9 @@
                     $("#polygon-L").attr('style', "fill:" + "rgb(" + lr + "," + lg + "," + lb + ")" );
                     $("#polygon-A").attr('style', "fill:" + "rgb(" + lr + "," + lg + "," + lb + ")" );
                     $("#polygon-B").attr('style', "fill:" + "rgb(" + lr + "," + lg + "," + lb + ")" );
+                    
+                    $.get("http://lab.geeklab.cz/okno/nastav.php", { vypinac: "1", geekR: gr, geekG: gg, geekB: gb, labR: lr, labG: lg, labB: lb } );
+
                 }
 
             });
