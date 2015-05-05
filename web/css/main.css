@@ -1,170 +1,108 @@
+html{
+font-size: 100% !important;
+} 
 
-body {
-        background-color: black !important;
-        margin-left: auto;                     
-        margin-right: auto;
-        width: 780px;
+body{
+      font-size: 1em;
+      font-family: "Roboto", sans-serif !important;
+      text-align: center !important;
+      background: black !important;
+      padding: 0em !important;
+      margin: 0em !important;
+			margin-left: auto !important;                     
+			margin-right: auto !important;
+      width: auto !important;
+      line-height: 70%; 
 }
 
-.tlacitko {
-        width: 13.32%;
-        margin-left: auto;                     
-        margin-right: auto; 
-        max-width: 74px;
-        display: block;
-}
 
+@media (max-width: 400px) {
 
-.SliderG {
-	width: 63%;
-  max-width: 300px;
-  margin-top: 10px;
-	display: inline-block;  
-}  
-
-.SliderL {
-	width: 100%;
-  max-width: 300px;
-  margin-top: 10px; 
-  display: inline-block;
-}
-
-.geekObal {
-	display: inline-block;
-	width: 70%;
-    max-width: 388px;
-    margin-top: 40px;
-}
-
-.labObal {
-	display: inline-block;
-    width: 43.16%; 
-    max-width: 243px;
-	margin-left: 50px;
-}
-
-input[type=range] {
-    -webkit-appearance: none;
-    height: 4px;
-    max-width: 300px;
-    border: none;
- 	  border-radius: 4px;
-    margin-top: 7px;    
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #0099FF;
-    border: none; 
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    opacity: 0.8;
-}
-
-input[type=range]:focus{
-    outline: none;
-}
-
-input[type=range]:hover{
-    background: #B2E0FF;
-}
- 
- 
- @media (max-width: 768px) 
-{
-
-	  body {
-			margin-left: auto;                     
-			margin-right: auto;
-			width: auto;
-	  }  
-	  
-	  .geekObal {
-		  margin-top: 60px;
-		  margin-left: auto !important;                     
-		  margin-right: auto;          
-		  display: block !important;
-	  }
-	  
-	  .labObal {
-		  margin-top: 20px;
-		  margin-left: auto;                     
-		  margin-right: auto;          
-		  display: block !important;
+    body{
+      font-size: 0.6em !important;
+      line-height: 100% !important; 
 	  }
 
-	  .tlacitko {
-		  margin-left: auto;                     
-		  margin-right: auto;          
-		  display: block !important;
+} 
+
+@media (min-height: 700px) {
+
+    body{
+      font-size: 1em !important;
+      line-height: 150% !important; 
 	  }
-	  
-	.SliderG {
-		  margin-left: auto;                     
-		  margin-right: auto;          
-		  display: block !important;
-	}
 
-	.SliderL {
-		  margin-left: auto;                     
-		  margin-right: auto;          
-		  display: block !important;  
-	}
-	
-	  
-}
+} 
 
-img {
-   display : block !important;
-   width: 100%;
+@media (min-width: 1280px) {
+
+    body{
+      font-size: 1em;
+      line-height: 70%; 
+	  }
+
+} 
   
-}
+  	.geek {
+      width: 18em; /* 1.62 x lab  */
+		  margin-top: 2em;
+      margin-left: auto;                     
+		  margin-right: auto;       
+		  display: block;
+	  }
+    	.lab {
+      width: 11.1em;
+		  margin-top: 3em;
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block;
+	  } 
+	  
+    
+	  .slidergeekObal {
+      width: 25em;
+		  margin-top: 2em;
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block;
+	  }
+	  
+	  .sliderlabObal {
+      width: 25em;
+		  margin-top: 2.5em;
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block;
+	  }
 
-figure {
-	text-align: center;
-}
+	  
+    .SliderG {
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block;
+	  }
 
-#barvaGR {
-	background-color: red;
-}
-
-#barvaGG {
-	background-color: green;
-}
-
-#barvaGB {
-	background-color: blue;
-}
-
-#barvaLR {
-	background-color: red;
-}
-
-#barvaLG {
-	background-color: green;
-}
-
-#barvaLB {
-	background-color: blue;
-}
-
-
-.buttonApp li img {
-    position: absolute;
-    opacity: 1;
-	width: 74px;
-}
-.buttonApp li img:first-child {
-    opacity: 0;
-}
-
-.buttonApp li:hover img {
-    opacity: 0;
-}
-.buttonApp li:hover img:first-child {
-    opacity: 1;
-}
+    .SliderL {
+		  margin-left: auto;                     
+		  margin-right: auto;          
+		  display: block;  
+	  }
 
 
+    .ui-btn, .ui-slider-handle {     /* kolo okolo */
+      border-color: rgba(52, 187, 238, 0.2) !important;
+      box-shadow:  red !important;
+    }
 
+    .ui-btn-down-b .ui-btn-inner  {          /* vnitrni kruh */
+      background-color: rgba(52, 187, 238, 1) !important;
+    }
+
+    .ui-btn-corner-all  {              /* cara */
+      background-color: rgba(255, 0, 0, 0.45) !important;
+    }
+
+    .ui-slider-track .ui-btn.ui-slider-handle.ui-focus {  /* stin */
+      border: 10px solid rgba(52, 187, 238,0.5);	
+      box-shadow: 0px 0px 2px 0px #34BBEE !important; 
+    }

@@ -1,0 +1,15 @@
+<svg version="1.1" baseProfile="tiny" id="svg-root"
+  width="30%" height="30%" viewBox="0 0 760 280"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+  <g id="GEEK">
+    <polygon id="polygon-G" fill="none" stroke="#00FF00" stroke-width="2" points="0,80 160,80 160,280 0,280 0,270 150,270 150,90 10,90 10,230 120,230 120,240 0,240"/>
+    <polygon id="polygon-E1" fill="none" stroke="#00FF00" stroke-width="2" points="200,80 360,80 360,130 240,130 240,120 350,120 350,90 210,90 210,230 360,230 360,240 200,240"/>
+    <polygon id="polygon-E2" fill="none" stroke="#00FF00" stroke-width="2" points="400,80 560,80 560,130 440,130 440,120 550,120 550,90 410,90 410,230 560,230 560,240 400,240"/>
+    <polygon id="polygon-K" fill="none" stroke="#00FF00" stroke-width="2" points="600,0 610,0 610,155 760,80 760,90 618,160 760,230 760,240 610,165 610,240 600,240"/>
+  </g>
+
+
+
+</svg>
